@@ -1,0 +1,642 @@
+<html>
+	<head>
+		<title>Placement</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<!--CSS Files-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/collage.css">
+		<!--JS Files-->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jssor.slider.min.js"></script>
+        <script type="text/javascript" src="js/scroll.js"></script>
+        <script type="text/javascript" src="js/placement.js"></script>
+        
+		
+		<style>
+			/* jssor slider bullet navigator skin 03 css */
+			/*
+			.jssorb03 div           (normal)
+			.jssorb03 div:hover     (normal mouseover)
+			.jssorb03 .av           (active)
+			.jssorb03 .av:hover     (active mouseover)
+			.jssorb03 .dn           (mousedown)
+			*/
+			.jssorb03 {
+			position: absolute;
+			}
+			.jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
+			position: absolute;
+			/* size of bullet elment */
+			width: 21px;
+			height: 21px;
+			text-align: center;
+			line-height: 21px;
+			color: white;
+			font-size: 12px;
+			background: url('img/b03.png') no-repeat;
+			overflow: hidden;
+			cursor: pointer;
+			}
+			.jssorb03 div { background-position: -5px -4px; }
+			.jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+			.jssorb03 .av { background-position: -65px -4px; }
+			.jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
+			/* jssor slider arrow navigator skin 03 css */
+			/*
+			.jssora03l                  (normal)
+			.jssora03r                  (normal)
+			.jssora03l:hover            (normal mouseover)
+			.jssora03r:hover            (normal mouseover)
+			.jssora03l.jssora03ldn      (mousedown)
+			.jssora03r.jssora03rdn      (mousedown)
+			*/
+			.jssora03l, .jssora03r {
+			display: block;
+			position: absolute;
+			/* size of arrow element */
+			width: 55px;
+			height: 55px;
+			cursor: pointer;
+			background: url('img/a03.png') no-repeat;
+			overflow: hidden;
+			}
+			.jssora03l { background-position: -3px -33px; }
+			.jssora03r { background-position: -63px -33px; }
+			.jssora03l:hover { background-position: -123px -33px; }
+			.jssora03r:hover { background-position: -183px -33px; }
+			.jssora03l.jssora03ldn { background-position: -243px -33px; }
+			.jssora03r.jssora03rdn { background-position: -303px -33px; }
+		</style>
+        
+        
+        
+	  <style>
+        
+          @media (max-width:767px){
+              
+              #right-menu{
+                  float: left!important;
+                  width: 100%!important;
+              }
+              #logo-display{
+                  width:130px!important;
+                  margin-bottom: -3em;
+              }
+            
+          }
+           button, html input[type=reset], input[type=submit] {
+                -webkit-appearance: button;
+                cursor: pointer;
+                border-radius: 7px;
+                height: 50px;
+                background-color: #014f7f;
+                box-shadow: none;
+                color: #fff;
+                border-color: #014F7F;
+                font-size: 19px;
+            }
+            .outer-part
+            {
+                    border: 2px solid rgba(0,0,0,.2);
+                    border-radius: 7px;
+                    outline: 0;
+                    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+                    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+            }
+            
+        
+        </style>
+	</head>
+	<body>
+		<!--Left Header-->
+		<div class="container-bgcolor">
+		<div class="container container-bgcolor">
+			<div class="row top-marging">
+				<div class="col-lg-4 col-md-4">
+					<div class="margin-from-top">
+						<p class="txtcolor-li"><i class="fa fa-phone"></i> +01 2334 853</p>
+						<p class="txtcolor-li"><i class="fa fa-envelope"></i>email@universe.com</p>
+					</div>
+				</div>
+				<!--Logo-->
+				<div class="col-md-4 col-lg-4">
+                    <div class="col-lg-4 col-md-4"></div>
+					<div class="col-lg-4 col-md-4">
+						<a href="#"><img src="images/logo.png"></a>
+					</div>
+                    <div class="col-lg-4 col-md-4"></div>
+				</div><br>
+				<!--Right Header-->
+				<div class="col-md-4 col-lg-4" >
+                    <div class="col-lg-2 col-md-2"></div>
+                    <div class="col-lg-10 col-md-10">
+					<ul class="nav navbar-nav">
+						<li class="bgcolor-li"><a href="#" class="txtcolor-li">About Us</a></li>
+						<li class="bgcolor-li"><a href="#" class="txtcolor-li">Contact</a></li>
+						<li class="bgcolor-li"><a href="#" class="txtcolor-li" data-toggle="modal" data-target="#myModal">Apply Now</a></li>
+					</ul>
+                    
+                    
+						<form name="search-form" action="#" method="get">    
+							<input type="text" name="search" placeholder="Search the site.." class="bgcolor-input" align="center">
+						</form>
+					</div>
+				</div>
+			</div>
+            </div>
+        </div>
+		<!--Main Headercol-lg-11 col-lg-offset-1 col-md-11 col-md-offset-1-->
+        <div class="container-bgcolor nav-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12  col-md-12">
+                   
+					<nav class="navbar-inverse" id="right-menu">
+					 <img src="images/logo.png" id="logo-display">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type = "button" class="navbar-toggle" data-toggle = "collapse" data-target ="#example-navbar-collapse">
+							<span class = "sr-only">Toggle navigation</span>
+							<span class = "icon-bar"></span>
+							<span class = "icon-bar"></span>
+							<span class = "icon-bar"></span>
+							</button>
+						</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class = "collapse navbar-collapse" id="example-navbar-collapse">
+								<ul class="nav navbar-nav">
+									<li class="in-block"><a href="index.html" class="active">| Home |</a></li>
+									<li>
+										<a href="eligibility.html">
+											| Eligibility<!--<span class="caret"></span>--> |
+										</a>
+										<!--<ul class="dropdown">
+											<li><a href="#" class="text-color">Events Grid</a></li>
+											<li><a href="#" class="text-color">Events List</a></li>
+											<li><a href="#" class="text-color">Events Details</a></li>
+											</ul>-->
+									</li>
+									<li>
+										<a href="Rules&Descipline.html">
+											| Rules & Discipline<!--<span class="caret"></span>--> |
+										</a>
+										<!--<ul class="dropdown">
+											<li><a href="#" class="text-color">Course List</a></li>
+											<li><a href="#" class="text-color">Single Course</a></li>
+											</ul>-->
+									</li>
+									<li>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">|Download<span class="caret"></span> |</a>
+										<ul class="dropdown full-border">
+											<li style="width:19em" class="border-to-dropdown dropdwon-bgcolor hvr-sweep-to-left" ><a href="bookanimate.html" class="text-color on-hover " >Course Structure</a></li>
+											<li style="width:19em" class="border-to-dropdown dropdwon-bgcolor hvr-sweep-to-left"><a href="bookanimate.html" class="text-color on-hover ">Matrix Gelignites 2015 Registration form</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">| About Us<span class="caret"></span> |</a>
+										<ul class="dropdown full-border">
+											<li style="width:11em;" ><a href="message.html" class="text-color on-hover hvr-sweep-to-left">College Comittee</a></li>
+											<li  style="width:11em;"><a href="staff.html" class="text-color on-hover hvr-sweep-to-left">Staff Details</a></li>
+											<li  style="width:11em;"><a href="infrastructure.html" class="text-color on-hover hvr-sweep-to-left">Infrastructure</a></li>
+											<li  style="width:11em;"><a href="Achivement.html" class="text-color on-hover hvr-sweep-to-left">Achivement</a></li>
+											<li  style="width:11em;"><a href="TeachingMethodology.html" class="text-color on-hover hvr-sweep-to-left">Teaching Methodology</a></li>
+											<li  style="width:11em;"><a href="activities.html" class="text-color on-hover hvr-sweep-to-left">Gallary</a></li>
+											<li  style="width:11em;"><a href="placement.html" class="text-color on-hover hvr-sweep-to-left" style="color:#DEBB69;">Placement Cell</a></li>
+										</ul>
+									</li>
+									<li><a href="contact.html">| Contact |</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Pop-up code-->
+		<div id="myModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content"></div>
+				<!--<div class="modal-header">
+					<img class="img-responsive img-circle img-logo" align="center" src="images/logo.png">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+					</div>-->
+				<div class="modal-body">
+					<form action="#" method="get" class="outer-part">
+						<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12"  style="background-color: white; height:32em;">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+							<h4 class="modal-title">Request Information</h4>
+							<label class="lbl-color"style="width:100%;">Campus of Interest:</label>
+							<br/>
+							<div class="input-select">
+								<select name="campus">
+									<option value="-1">-- select --</option>
+									<optgroup label="Picnic">
+										<option value="Mustard">Mustard</option>
+										<option value="Ketchup">Ketchup</option>
+										<option value="Relish">Relish</option>
+									</optgroup>
+									<optgroup label="Camping">
+										<option value="Tent">Tent</option>
+										<option value="Flashlight">Flashlight</option>
+										<option value="Toilet Paper">Toilet Paper</option>
+									</optgroup>
+								</select>
+							</div>
+							<label class="lbl-color"style="width:100%;">Program of Interest:</label>
+							<div class="input-select">
+								<select name="Program">
+									<option value="-1">-- select --</option>
+									<option value="Germany">Germany</option>
+									<option value="United Kingdom">United Kingdom</option>
+									<option value="Italy">Italy</option>
+									<option value="France">France</option>
+									<option value="Italy">Belgium</option>
+									<option value="Monaco">Monaco</option>
+								</select>
+							</div>
+							<div class="txtbox">
+								<label class="lbl-color">
+								Full Name:
+								</label>
+								<input type="text" name="fullname">
+								<label class="email">Email Address</label>
+								<input type="text" name="email">
+							</div>
+							<span class="pull-left text">Subscribe to our newsletter</span>
+							<input type="button" class="mybotton" value="Submit Request">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+        
+        
+    <div class="page-wrap">
+		<section class="tz-courses">
+			<div class="container">
+				<div class="row">
+					<h3 class="tz-title-leader heading1"><span class="border-all">Our Placement</span><span class="link-left"><a href="#" class="link-color">Download Placement Brochure 2013-14</a></span></h3>
+					<div class="col-md-3">
+						<ul id="tz-sidemenu" class="tz-cources-content-left" style="list-style-type:none; z-index: 3; position: relative;">
+							<li class="active">
+								<div class="fa-rotate">
+									<a href="#place" class="tz-open tz-hover" data-toggle="pill"><span><img src="images/Value2.png"></span>
+									<i class="fa fa-arrows-alt tz-color-4"></i>
+									<strong class="txt-color">Placement Cell</strong></a>
+								</div>
+							</li>
+							<li>
+								<div class="fa-rotate">
+									<a href="#objective" class="tz-hover tz-open" data-toggle="pill"><span><img src="images/Value2.png"></span>
+									<i class="fa fa-arrows-alt  tz-color-4"></i>
+									<strong class="txt-color">Objective</strong>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="fa-rotate">
+									<a href="#padagogy" class="tz-hover tz-open" data-toggle="pill"><span><img src="images/Value2.png"></span>
+									<i class="fa fa-arrows-alt  tz-color-4"></i>
+									<strong class="txt-color">Pedagogy:</strong>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-9">
+						<div class="tab-content">
+							<div id="place" class="tab-pane fade in active description ">
+								<h4 class="heading">Placement Cell</h4>
+								<p class="parastyle">The placement cell is operated by professionals with commendable work experience from industry and academic field. The cell is fully equipped with telephone lines, fax connection and computers with internet facility.</p>
+							</div>
+							<div  id="objective" class="tab-pane fade description ">
+								<h4 class="heading">Objective</h4>
+								<p class="parastyle">The objective of the Institute is to groom the students by conducting ongoing sessions on communication skills, personality development, Presentation Skills & Extempore speech in order to train them for the placements & secure right job for right candidate.</p>
+							</div>
+							<div id="padagogy" class="tab-pane fade description ">
+								<h4 class="heading">Pedagogy:</h4>
+								<p class="parastyle">The classroom sessions will be highly interactive and participative in nature. In the teaching methodology case studies, viva, group discussion, presentations, mind expanding exercises and perspective building exercises are included. The distinguishing feature of this programme is to provide hands on experience in applying analytical models in our state- of - the - art computer lab. There will be continuous evaluation & if any participant is lagging behind then required coaching & counseling will be provided.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Slider-->
+		<div id="jssor_1" style="position: relative; margin: 0 auto; top: 23px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;" class="top-margin">
+			<!-- Loading Screen -->
+			<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+				<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+				<div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+			</div>
+			<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+				<div style="display: none;">
+					<img data-u="image" src="images/abhijit_d.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/abhijit_s.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/amol_b (1).jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Amol Borade</h5>
+						<p>Telematic Cosmec Pvt Ltd	Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/amruta_p.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Amruta Pawar</h5>
+						<p>Eclerx Rs. 2.16 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/amruta_s.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Amruta Shinde</h5>
+						<p>Trinethra Retail	Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/ankit_s.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Ankit Sehgal</h5>
+						<p>Jaro Education	Rs. 4.26 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/anurag_j.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Anurag Joshi</h5>
+						<p>Beautex Pvt. Ltd	Rs. 2.4 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/bhagwat_n.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Bhagwat Narawade</h5>
+						<p>Galderma India Pvt. Ltd	Rs. 3.6 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/bhagyashree_m.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Bhagyashree Mandekar</h5>
+						<p>Eclerx	Rs. 2.16 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/bhimashankar_d.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Bhimashankar Deshmukh</h5>
+						<p>Axis Bank	Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/bhushan_s.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/dhaval_j.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Bhushan Sabale</h5>
+						<p>Axis Bank	Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/imran_p.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/imran_sh.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Imran Patel</h5>
+						<p>Reliance Capital	Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/manali_n.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Manali Naik</h5>
+						<p>Information & Telecom System Pvt Ltd	Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/manisha_p.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Manisha Pandit</h5>
+						<p>Eisen Pharmaceuticals Co. (Pvt.) Ltd	Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/mrunmai_g.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Mrunmai Gapchup</h5>
+						<p>Infosys	Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/nilesh_j.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Nilesh Jadhav</h5>
+						<p>Lisa Home Solution	Rs. 1.9 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/palak_j.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/rashmi_m.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/ravi_ch.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/rizwan_s.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/rucha_r.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/sachin_k.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/sagar_b.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/sandeep_n.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/sandeep_s.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/vilasraj_j.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+				<div style="display: none;">
+					<img data-u="image" src="images/vishal_z.jpg" />
+					<div class="carousel-caption top-padding4">
+						<h5 class="h5-margin">Abhijeet Dalwi</h5>
+						<p>Weltall Servicess Pvt.Ltd Rs. 1.8 Lacs</p>
+					</div>
+				</div>
+			</div>
+			<!-- Bullet Navigator 
+				<div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+				    
+				    <div data-u="prototype" style="width:21px;height:21px;">
+				        <div data-u="numbertemplate"></div>
+				    </div>
+				</div>
+				<!-- Arrow Navigator -->
+			<span data-u="arrowleft" class="jssora03l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+			<span data-u="arrowright" class="jssora03r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+			<a href="http://www.jssor.com" style="display:none">Slideshow Maker</a>
+		</div>
+		<script>
+			jssor_1_slider_init();
+		</script>
+		<div>
+			<br>
+		</div>
+        </div>
+		<!--Footer part-->
+        <footer class="site-footer">
+		<div class="containerfooter">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<h5 class="text-color">CONTACT US</h5>
+						<p class="text-color">The simple contact form below comes packed within this theme. 
+							<br><br>Mailing address:<br>877 Filbert Street<br>Chester, PA 19013
+						</p>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<h5 class="text-color">FAVOURITES</h5>
+						<ul class="text-color">
+							<li><a href="#" class="text-color">A ti Z Index</a></li>
+							<li><a href="#" class="text-color">Admissions</a></li>
+							<li><a href="#" class="text-color">Bookstore</a></li>
+							<li><a href="#" class="text-color">Catalog/Classes</a></li>
+							<li><a href="#" class="text-color">Dining</a></li>
+							<li><a href="#" class="text-color">Graduation</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<h5 class="text-color">Quick Links</h5>
+						<ul class="text-color">
+							<li><a href="anti-ragging.html" class="text-color">Anti-Ragging</a></li>
+							<li><a href="comitee.html" class="text-color">Grievance Comittee</a></li>
+							<li><a href="mentors.html" class="text-color">Corporate Mentors</a></li>
+							<li><a href="TeachingMethodology.html" class="text-color">Teaching Methodology</a></li>
+							<li><a href="activities.html" class="text-color">Gallery</a></li>
+							<!--<li><a href="#" class="text-color">Alumni</a></li>-->
+						</ul>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<h5 class="text-color">STUDY</h5>
+						<ul class="text-color">
+							<li class="a"><a href="#" class="text-color">Courses</a></li>
+							<li class="a"><a href="#" class="text-color">Apply Now</a></li>
+							<li class="a"><a href="#" class="text-color">Scholarships</a></li>
+							<li class="a"><a href="#" class="text-color">FAQs</a></li>
+							<li class="a"><a href="#" class="text-color">Postdocs</a></li>
+							<li class="a"><a href="#" class="text-color">Student enquiries</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<h5 class="text-color">Follow Us</h5>
+						<ul class="text-color">
+							<!--<div class="col-md-1 col-lg-1 col-sm-4 col-xs-4">-->
+							<li><a href="#" class="fa fa-facebook text-color"></a></li>
+							<li><a href="#" class="fa fa-twitter text-color"></a></li>
+							<li><a href="#" class="fa fa-linkedin text-color"></a></li>
+							<!--</div>
+								<div class="col-md-1 col-lg-1 col-sm-4 col-xs-4">
+								<li><a href="#" class="fa fa-instagram text-color"></a></li>
+								<li><a href="#" class="fa fa-apple text-color"></a></li>
+								<li><a href="#" class="fa fa-youtube text-color"></a></li>
+								<!--</div>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=" containerfooter2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+						<p class="small-footer-text">© Copyright 2014. Universe designed by </p>
+					</div>
+					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+						<ul class="nav navbar-nav">
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Home</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Courses</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Events</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Blogs</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Shortcodes</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        </footer>
+	</body>
+</html>

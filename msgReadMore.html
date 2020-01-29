@@ -1,0 +1,410 @@
+<html>
+	<head>
+		<title>Read More</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--CSS Files-->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/collage.css">
+		<!--JS Files-->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/scroll.js"></script>
+        
+        
+        <style type="text/css">
+            .read-para
+            {
+                line-height: 2em;
+                font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+                text-align: justify;
+            }
+            .img-msg
+            {
+                width: 100%;
+                height: 48%;
+                border: 2px solid #ff9900;
+            }
+            .row-top
+            {
+                padding-top: 15px;
+            }
+            .row-top2
+            {
+                 padding-top: 25px;
+            }
+            
+            blockquote
+            {
+                border: 1px solid #eee;
+                color: #fff;
+                font-size: 15px;
+                line-height: 35.2px;
+                margin: 0px 0 0;
+                background: #ff5050;
+                padding: 10px;
+                height: 5em;
+
+                
+            }
+            
+            blockquote i 
+            {
+                color: #fecc27;
+                padding-right: 10px;
+            }
+            .para-title
+            {
+                font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+                text-align: justify;
+                font-weight: 600;
+                font-style: bold;
+            }
+            .in-para
+            {
+              display: block;  
+                 font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+                text-align: justify;
+                font-weight: 600;
+                font-style: bold;
+                float: right;
+            }
+        </style>
+        
+        
+	  <style>
+        
+          @media (max-width:767px){
+              
+              #right-menu{
+                  float: left!important;
+                  width: 100%!important;
+              }
+              #logo-display{
+                  width:130px!important;
+                  margin-bottom: -3em;
+              }
+            
+          }
+           button, html input[type=reset], input[type=submit] {
+                -webkit-appearance: button;
+                cursor: pointer;
+                border-radius: 7px;
+                height: 50px;
+                background-color: #014f7f;
+                box-shadow: none;
+                color: #fff;
+                border-color: #014F7F;
+                font-size: 19px;
+            }
+            .outer-part
+            {
+                    border: 2px solid rgba(0,0,0,.2);
+                    border-radius: 7px;
+                    outline: 0;
+                    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+                    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+            }
+            
+        
+        </style>
+	</head>
+	<body>
+		<!--Left Header-->
+		<div class="container-bgcolor">
+		<div class="container container-bgcolor">
+			<div class="row top-marging">
+				<div class="col-lg-4 col-md-4">
+					<div class="margin-from-top">
+						<p class="txtcolor-li"><i class="fa fa-phone"></i> +01 2334 853</p>
+						<p class="txtcolor-li"><i class="fa fa-envelope"></i>email@universe.com</p>
+					</div>
+				</div>
+				<!--Logo-->
+				<div class="col-md-4 col-lg-4">
+                    <div class="col-lg-4 col-md-4"></div>
+					<div class="col-lg-4 col-md-4">
+						<a href="#"><img src="images/logo.png"></a>
+					</div>
+                    <div class="col-lg-4 col-md-4"></div>
+				</div><br>
+				<!--Right Header-->
+				<div class="col-md-4 col-lg-4" >
+                    <div class="col-lg-2 col-md-2"></div>
+                    <div class="col-lg-10 col-md-10">
+					<ul class="nav navbar-nav">
+						<li class="bgcolor-li"><a href="#" class="txtcolor-li">About Us</a></li>
+						<li class="bgcolor-li"><a href="#" class="txtcolor-li">Contact</a></li>
+						<li class="bgcolor-li"><a href="#" class="txtcolor-li" data-toggle="modal" data-target="#myModal">Apply Now</a></li>
+					</ul>
+                    
+                    
+						<form name="search-form" action="#" method="get">    
+							<input type="text" name="search" placeholder="Search the site.." class="bgcolor-input" align="center">
+						</form>
+					</div>
+				</div>
+			</div>
+            </div>
+        </div>
+		<!--Main Headercol-lg-11 col-lg-offset-1 col-md-11 col-md-offset-1-->
+        <div class="container-bgcolor nav-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12  col-md-12">
+                   
+					<nav class="navbar-inverse" id="right-menu">
+					 <img src="images/logo.png" id="logo-display">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type = "button" class="navbar-toggle" data-toggle = "collapse" data-target ="#example-navbar-collapse">
+							<span class = "sr-only">Toggle navigation</span>
+							<span class = "icon-bar"></span>
+							<span class = "icon-bar"></span>
+							<span class = "icon-bar"></span>
+							</button>
+						</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class = "collapse navbar-collapse" id="example-navbar-collapse">
+								<ul class="nav navbar-nav">
+									<li class="in-block"><a href="index.html" class="active">| Home |</a></li>
+									<li>
+										<a href="eligibility.html">
+											| Eligibility<!--<span class="caret"></span>--> |
+										</a>
+										<!--<ul class="dropdown">
+											<li><a href="#" class="text-color">Events Grid</a></li>
+											<li><a href="#" class="text-color">Events List</a></li>
+											<li><a href="#" class="text-color">Events Details</a></li>
+											</ul>-->
+									</li>
+									<li>
+										<a href="Rules&Descipline.html">
+											| Rules & Discipline<!--<span class="caret"></span>--> |
+										</a>
+										<!--<ul class="dropdown">
+											<li><a href="#" class="text-color">Course List</a></li>
+											<li><a href="#" class="text-color">Single Course</a></li>
+											</ul>-->
+									</li>
+									<li>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">|Download<span class="caret"></span> |</a>
+										<ul class="dropdown full-border">
+											<li style="width:19em" class="border-to-dropdown dropdwon-bgcolor hvr-sweep-to-left" ><a href="bookanimate.html" class="text-color on-hover " >Course Structure</a></li>
+											<li style="width:19em" class="border-to-dropdown dropdwon-bgcolor hvr-sweep-to-left"><a href="bookanimate.html" class="text-color on-hover ">Matrix Gelignites 2015 Registration form</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">| About Us<span class="caret"></span> |</a>
+										<ul class="dropdown full-border">
+											<li style="width:11em;" ><a href="message.html" class="text-color on-hover hvr-sweep-to-left">College Comittee</a></li>
+											<li  style="width:11em;"><a href="staff.html" class="text-color on-hover hvr-sweep-to-left">Staff Details</a></li>
+											<li  style="width:11em;"><a href="infrastructure.html" class="text-color on-hover hvr-sweep-to-left">Infrastructure</a></li>
+											<li  style="width:11em;"><a href="Achivement.html" class="text-color on-hover hvr-sweep-to-left">Achivement</a></li>
+											<li  style="width:11em;"><a href="TeachingMethodology.html" class="text-color on-hover hvr-sweep-to-left">Teaching Methodology</a></li>
+											<li  style="width:11em;"><a href="activities.html" class="text-color on-hover hvr-sweep-to-left">Gallary</a></li>
+											<li  style="width:11em;"><a href="placement.html" class="text-color on-hover hvr-sweep-to-left">Placement Cell</a></li>
+										</ul>
+									</li>
+									<li><a href="contact.html">| Contact |</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Pop-up code-->
+		<div id="myModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content"></div>
+				<!--<div class="modal-header">
+					<img class="img-responsive img-circle img-logo" align="center" src="images/logo.png">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+					</div>-->
+				<div class="modal-body">
+					<form action="#" method="get" class="outer-part">
+						<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12"  style="background-color: white; height:32em;">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+							<h4 class="modal-title">Request Information</h4>
+							<label class="lbl-color"style="width:100%;">Campus of Interest:</label>
+							<br/>
+							<div class="input-select">
+								<select name="campus">
+									<option value="-1">-- select --</option>
+									<optgroup label="Picnic">
+										<option value="Mustard">Mustard</option>
+										<option value="Ketchup">Ketchup</option>
+										<option value="Relish">Relish</option>
+									</optgroup>
+									<optgroup label="Camping">
+										<option value="Tent">Tent</option>
+										<option value="Flashlight">Flashlight</option>
+										<option value="Toilet Paper">Toilet Paper</option>
+									</optgroup>
+								</select>
+							</div>
+							<label class="lbl-color"style="width:100%;">Program of Interest:</label>
+							<div class="input-select">
+								<select name="Program">
+									<option value="-1">-- select --</option>
+									<option value="Germany">Germany</option>
+									<option value="United Kingdom">United Kingdom</option>
+									<option value="Italy">Italy</option>
+									<option value="France">France</option>
+									<option value="Italy">Belgium</option>
+									<option value="Monaco">Monaco</option>
+								</select>
+							</div>
+							<div class="txtbox">
+								<label class="lbl-color">
+								Full Name:
+								</label>
+								<input type="text" name="fullname">
+								<label class="email">Email Address</label>
+								<input type="text" name="email">
+							</div>
+							<span class="pull-left text">Subscribe to our newsletter</span>
+							<input type="button" class="mybotton" value="Submit Request">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+        
+    <div class="page-wrap">
+        <div class="container">
+            <div class="row row-top2">
+                <div class="col-lg-4 col-md-4 ">
+                     <img src="images/message/msg1.jpg" class="img-responsive img-msg"/>
+                        <blockquote id="br-rahul-v-karad">
+                            <i class="fa fa-quote-right"></i>Prof. M. N. Navale Founder President</blockquote>
+                </div>
+                    <div class="col-lg-8 col-md-8 ">
+                        <h4 class="para-title">Prof.  M.N. Navale's Message</h4>
+                          <p class="read-para">"Success can only come to you by ceaseless devotion to the task lying in front of you. I would like to tell the young boys and girls not to lose hope and courage. There is nothing noteworthy in this world that can come without the sweat of our brows. I can assert without fear of contradiction that the quality of the Indian mind is equal to the quality of any Teutonic, Nordic or Anglo-saxon mind. What we lack is the determination and perseverance and the driving force which takes one anywhere". "We have, I think, developed an inferiority complex. I think what is needed in India today is the destruction of theat defeatist spirit. We need a spirit of victory, a spirit that will carry us to our rightful place under the sun, a spirit which will recognize that we, as inheritants of a proud civilization, are entitled to a rightful place on this planet. If that indomitable spirit were to arise, nothing can hold us from achieving our rightful destiny." The path ahead for most of the students is going to be difficult, filled with uncertainties and sometimes with wonderful surprises. I am certain that with fireless efforts you will succeed in your future endeavors. That Institution provides inputs to the students to cross all the hurdles and achieve the most difficult aim in their careers. I wish you all the best in your future.</p>
+                    
+                    
+            </div>
+            </div>
+                <div class="row row-top">
+                <div class="col-lg-4 col-md-4">
+                     
+                    
+                        <img src="images/message/msg2.jpg" class="img-responsive img-msg"/>
+                        <blockquote id="br-rahul-v-karad">
+                            <i class="fa fa-quote-right"></i>Dr. Mrs.Shilpa R. Kulkarni Ph.D, M.B.A., Bsc. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Founder Secretary</blockquote>
+                    </div>
+                    <div class="col-lg-8 col-md-8 ">
+                        <h4 class="para-title">Founder Secretary Dr. Mrs. Shilpa R. Kulkarni's Message</h4>
+                          <p class="read-para">The newly emerging changes in the business environment are fast & far - reaching in a highly competitive market. Globalization is the new mantra of business. It is in this context, Matrix Business School will harness individual strengths, chisel & channelize the potential of the students to match the competencies of market needs. With this clear objective in mind we have started this institution to leverage the knowledge to expand the horizones of the youth. We want to enrich the students with the updated information in the field of Management & IT.With Pune city growing at a dynamic speed, the opportunities too are spreading their wings. 
+So, Matrix opens the door to great carees which will equip the students to achieve their aims & goals through comprehensive learning across the range of streams it offers.We, at Matrix believe in giving more practical knowledge, case studies which provide to bridge the gap between the theoretical concepts learnt in the classrooms & application in the industry therby, enhancing their goals & enterpreneurial moves successfully. Matrix boasts of the best infrastructural facilities and is supported by knowledgeable & experienced faculty.With all this plethora of inputs, we kindle the itinerary of careers of the young aspirants so as to have an enriched & vibrant experience with us.</p>
+                    </div>
+          </div>
+               
+                <div class="row row-top">
+                <div class="col-lg-4 col-md-4 ">
+                    
+                   
+                        <img src="images/message/msg3.jpg" class="img-responsive img-msg"/>
+                        <blockquote id="br-rahul-v-karad">
+                            <i class="fa fa-quote-right"></i>Prof. (Dr.) Satish S. Ubale Ph.D. (Supply Chain Management), NET, M.M.S. & M.Sc. Director</blockquote>
+                    </div>
+                    <div class="col-lg-8 col-md-8 ">
+                        <h4 class="para-title">Director Prof. (Dr.) Satish S. Ubale's Message</h4>
+                          <p class="read-para">Dear All,
+We inculcate human values and professional ethics in the students, which help them, make decisions and create path that are good not only for them, but also are good for the society. To fulfill its mission in new and powerful ways, each member of Matrix School of Management Studies strives to achieve excellence in every endeavor – be it education, research, consulting or training – by making continuous improvements in curricula and pedagogical tools. Management education is more than just academics where "Excellence and Values" are our guiding principles which are reflected in every activity of the Institute. Our goal is to be a school of generative ideas so that we remain relevant to our globe. The corporate interactions including corporate supported projects undertaken by our students under faculty supervision is considered unique, in the sense that it provides a close hands-on-experience to our students as a part of our curriculum. I am confident that this group of professionals with enhanced leadership and managerial skills through the programme will be a high potential asset for our organization and for our country. I invite you to join the institute and make the difference.
+</p>
+                    </div>
+            </div>
+                
+        </div>
+        <div><br><br></div>
+        </div>    
+        
+        <!--Footer part-->
+        <footer class="site-footer">
+		<div class="containerfooter">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<h5 class="text-color">CONTACT US</h5>
+						<p class="text-color">The simple contact form below comes packed within this theme. 
+							<br><br>Mailing address:<br>877 Filbert Street<br>Chester, PA 19013
+						</p>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<h5 class="text-color">FAVOURITES</h5>
+						<ul class="text-color">
+							<li><a href="#" class="text-color">A ti Z Index</a></li>
+							<li><a href="#" class="text-color">Admissions</a></li>
+							<li><a href="#" class="text-color">Bookstore</a></li>
+							<li><a href="#" class="text-color">Catalog/Classes</a></li>
+							<li><a href="#" class="text-color">Dining</a></li>
+							<li><a href="#" class="text-color">Graduation</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<h5 class="text-color">Quick Links</h5>
+						<ul class="text-color">
+							<li><a href="anti-ragging.html" class="text-color">Anti-Ragging</a></li>
+							<li><a href="comitee.html" class="text-color">Grievance Comittee</a></li>
+							<li><a href="mentors.html" class="text-color">Corporate Mentors</a></li>
+							<li><a href="TeachingMethodology.html" class="text-color">Teaching Methodology</a></li>
+							<li><a href="activities.html" class="text-color">Gallery</a></li>
+							<!--<li><a href="#" class="text-color">Alumni</a></li>-->
+						</ul>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<h5 class="text-color">STUDY</h5>
+						<ul class="text-color">
+							<li class="a"><a href="#" class="text-color">Courses</a></li>
+							<li class="a"><a href="#" class="text-color">Apply Now</a></li>
+							<li class="a"><a href="#" class="text-color">Scholarships</a></li>
+							<li class="a"><a href="#" class="text-color">FAQs</a></li>
+							<li class="a"><a href="#" class="text-color">Postdocs</a></li>
+							<li class="a"><a href="#" class="text-color">Student enquiries</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<h5 class="text-color">Follow Us</h5>
+						<ul class="text-color">
+							<!--<div class="col-md-1 col-lg-1 col-sm-4 col-xs-4">-->
+							<li><a href="#" class="fa fa-facebook text-color"></a></li>
+							<li><a href="#" class="fa fa-twitter text-color"></a></li>
+							<li><a href="#" class="fa fa-linkedin text-color"></a></li>
+							<!--</div>
+								<div class="col-md-1 col-lg-1 col-sm-4 col-xs-4">
+								<li><a href="#" class="fa fa-instagram text-color"></a></li>
+								<li><a href="#" class="fa fa-apple text-color"></a></li>
+								<li><a href="#" class="fa fa-youtube text-color"></a></li>
+								<!--</div>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=" containerfooter2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+						<p class="small-footer-text">© Copyright 2014. Universe designed by </p>
+					</div>
+					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+						<ul class="nav navbar-nav">
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Home</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Courses</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Events</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Blogs</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Shortcodes</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        </footer>
+	</body>
+</html>
+       

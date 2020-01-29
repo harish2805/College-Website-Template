@@ -1,0 +1,580 @@
+<html>
+	<head>
+		<title>Comitee</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--CSS Files-->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/collage.css">
+		<!--JS Files-->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jssor.slider.min.js"></script>
+        <script type="text/javascript" src="js/scroll.js"></script>
+        <script type="text/javascript" src="js/comittee.js"></script>
+        
+		
+		<style>
+			/* jssor slider arrow navigator skin 08 css */
+			/*
+			.jssora08l                  (normal)
+			.jssora08r                  (normal)
+			.jssora08l:hover            (normal mouseover)
+			.jssora08r:hover            (normal mouseover)
+			.jssora08l.jssora08ldn      (mousedown)
+			.jssora08r.jssora08rdn      (mousedown)
+			*/
+			.jssora08l, .jssora08r {
+			display: block;
+			position: absolute;
+			/* size of arrow element */
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+			background: url('images/a08.png') no-repeat;
+			overflow: hidden;
+			opacity: .4;
+			filter: alpha(opacity=40);
+			}
+			.jssora08l { background-position: -5px -35px; }
+			.jssora08r { background-position: -65px -35px; }
+			.jssora08l:hover { background-position: -5px -35px; opacity: .8; filter:alpha(opacity=80); }
+			.jssora08r:hover { background-position: -65px -35px; opacity: .8; filter:alpha(opacity=80); }
+			.jssora08l.jssora08ldn { background-position: -5px -35px; opacity: .3; filter:alpha(opacity=30); }
+			.jssora08r.jssora08rdn { background-position: -65px -35px; opacity: .3; filter:alpha(opacity=30); }
+			.txt-font
+			{
+			font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+			color:#4E443C;
+			font-weight: 100; margin-bottom: 0;
+			}
+			.bottom-border
+			{
+			border-bottom:3px solid #683233;
+			text-align: justify;
+			}
+			.paraalign
+			{
+			text-align: justify;
+			line-height: 2.5em;
+			}
+			.parastyle
+			{
+			font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+			}
+			.paraalign2
+			{
+			text-align: justify;
+			line-height: 2em;
+			}
+		</style>
+        
+        
+      
+	  <style>
+        
+          @media (max-width:767px){
+              
+              #right-menu{
+                  float: left!important;
+                  width: 100%!important;
+              }
+              #logo-display{
+                  width:130px!important;
+                  margin-bottom: -3em;
+              }
+            
+          }
+          
+         button, html input[type=reset], input[type=submit] {
+                -webkit-appearance: button;
+                cursor: pointer;
+                border-radius: 7px;
+                height: 50px;
+                background-color: #014f7f;
+                box-shadow: none;
+                color: #fff;
+                border-color: #014F7F;
+                font-size: 19px;
+            }
+            .outer-part
+            {
+                    border: 2px solid rgba(0,0,0,.2);
+                    border-radius: 7px;
+                    outline: 0;
+                    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+                    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+            }
+            
+        </style>
+	</head>
+	<body>
+		<!--Left Header-->
+		<div class="container-bgcolor">
+		<div class="container container-bgcolor">
+			<div class="row top-marging">
+				<div class="col-lg-4 col-md-4">
+					<div class="margin-from-top">
+						<p class="txtcolor-li"><i class="fa fa-phone"></i> +01 2334 853</p>
+						<p class="txtcolor-li"><i class="fa fa-envelope"></i>email@universe.com</p>
+					</div>
+				</div>
+				<!--Logo-->
+				<div class="col-md-4 col-lg-4">
+                    <div class="col-lg-4 col-md-4"></div>
+					<div class="col-lg-4 col-md-4">
+						<a href="#"><img src="images/logo.png"></a>
+					</div>
+                    <div class="col-lg-4 col-md-4"></div>
+				</div><br>
+				<!--Right Header-->
+				<div class="col-md-4 col-lg-4" >
+                    <div class="col-lg-2 col-md-2"></div>
+                    <div class="col-lg-10 col-md-10">
+					<ul class="nav navbar-nav">
+						<li class="bgcolor-li"><a href="#" class="txtcolor-li">About Us</a></li>
+						<li class="bgcolor-li"><a href="#" class="txtcolor-li">Contact</a></li>
+						<li class="bgcolor-li"><a href="#" class="txtcolor-li" data-toggle="modal" data-target="#myModal">Apply Now</a></li>
+					</ul>
+                    
+                    
+						<form name="search-form" action="#" method="get">    
+							<input type="text" name="search" placeholder="Search the site.." class="bgcolor-input" align="center">
+						</form>
+					</div>
+				</div>
+			</div>
+            </div>
+        </div>
+		<!--Main Headercol-lg-11 col-lg-offset-1 col-md-11 col-md-offset-1-->
+        <div class="container-bgcolor nav-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12  col-md-12">
+                   
+					<nav class="navbar-inverse" id="right-menu">
+					 <img src="images/logo.png" id="logo-display">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type = "button" class="navbar-toggle" data-toggle = "collapse" data-target ="#example-navbar-collapse">
+							<span class = "sr-only">Toggle navigation</span>
+							<span class = "icon-bar"></span>
+							<span class = "icon-bar"></span>
+							<span class = "icon-bar"></span>
+							</button>
+						</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class = "collapse navbar-collapse" id="example-navbar-collapse">
+								<ul class="nav navbar-nav">
+									<li class="in-block"><a href="index.html" class="active">| Home |</a></li>
+									<li>
+										<a href="eligibility.html">
+											| Eligibility<!--<span class="caret"></span>--> |
+										</a>
+										<!--<ul class="dropdown">
+											<li><a href="#" class="text-color">Events Grid</a></li>
+											<li><a href="#" class="text-color">Events List</a></li>
+											<li><a href="#" class="text-color">Events Details</a></li>
+											</ul>-->
+									</li>
+									<li>
+										<a href="Rules&Descipline.html">
+											| Rules & Discipline<!--<span class="caret"></span>--> |
+										</a>
+										<!--<ul class="dropdown">
+											<li><a href="#" class="text-color">Course List</a></li>
+											<li><a href="#" class="text-color">Single Course</a></li>
+											</ul>-->
+									</li>
+									<li>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">|Download<span class="caret"></span> |</a>
+										<ul class="dropdown full-border">
+											<li style="width:19em" class="border-to-dropdown dropdwon-bgcolor hvr-sweep-to-left" ><a href="bookanimate.html" class="text-color on-hover " >Course Structure</a></li>
+											<li style="width:19em" class="border-to-dropdown dropdwon-bgcolor hvr-sweep-to-left"><a href="bookanimate.html"  class="text-color on-hover ">Matrix Gelignites 2015 Registration form</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">| About Us<span class="caret"></span> |</a>
+										<ul class="dropdown full-border">
+											<li style="width:11em;" ><a href="message.html" class="text-color on-hover hvr-sweep-to-left">College Comittee</a></li>
+											<li  style="width:11em;"><a href="staff.html" class="text-color on-hover hvr-sweep-to-left">Staff Details</a></li>
+											<li  style="width:11em;"><a href="infrastructure.html" class="text-color on-hover hvr-sweep-to-left">Infrastructure</a></li>
+											<li  style="width:11em;"><a href="Achivement.html" class="text-color on-hover hvr-sweep-to-left">Achivement</a></li>
+											<li  style="width:11em;"><a href="TeachingMethodology.html" class="text-color on-hover hvr-sweep-to-left">Teaching Methodology</a></li>
+											<li  style="width:11em;"><a href="activities.html" class="text-color on-hover hvr-sweep-to-left">Gallary</a></li>
+											<li  style="width:11em;"><a href="placement.html" class="text-color on-hover hvr-sweep-to-left">Placement Cell</a></li>
+										</ul>
+									</li>
+									<li><a href="contact.html">| Contact |</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Pop-up code-->
+		<div id="myModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content"></div>
+				<!--<div class="modal-header">
+					<img class="img-responsive img-circle img-logo" align="center" src="images/logo.png">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+					</div>-->
+				<div class="modal-body">
+					<form action="#" method="get" class="outer-part">
+						<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12"  style="background-color: white; height:32em;">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+							<h4 class="modal-title">Request Information</h4>
+							<label class="lbl-color"style="width:100%;">Campus of Interest:</label>
+							<br/>
+							<div class="input-select">
+								<select name="campus">
+									<option value="-1">-- select --</option>
+									<optgroup label="Picnic">
+										<option value="Mustard">Mustard</option>
+										<option value="Ketchup">Ketchup</option>
+										<option value="Relish">Relish</option>
+									</optgroup>
+									<optgroup label="Camping">
+										<option value="Tent">Tent</option>
+										<option value="Flashlight">Flashlight</option>
+										<option value="Toilet Paper">Toilet Paper</option>
+									</optgroup>
+								</select>
+							</div>
+							<label class="lbl-color"style="width:100%;">Program of Interest:</label>
+							<div class="input-select">
+								<select name="Program">
+									<option value="-1">-- select --</option>
+									<option value="Germany">Germany</option>
+									<option value="United Kingdom">United Kingdom</option>
+									<option value="Italy">Italy</option>
+									<option value="France">France</option>
+									<option value="Italy">Belgium</option>
+									<option value="Monaco">Monaco</option>
+								</select>
+							</div>
+							<div class="txtbox">
+								<label class="lbl-color">
+								Full Name:
+								</label>
+								<input type="text" name="fullname">
+								<label class="email">Email Address</label>
+								<input type="text" name="email">
+							</div>
+							<span class="pull-left text">Subscribe to our newsletter</span>
+							<input type="button" class="mybotton" value="Submit Request">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+        
+    <div class="page-wrap">
+		<div class="container">
+			<div class="row">
+				<!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h3 class="bgcolor">Ladies And Redressal Comittee</h3>
+					<table class="table table-bordered" align="center" style="width:55%;">
+						<tr class="txt-font">
+							<th style="text-align:center;">Name of Member</th>
+							<th>Designation</th>
+						</tr>
+					</table>
+					<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: -16px; width:600px; height: 250px; overflow: hidden; visibility: hidden;">
+						<!-- Loading Screen 
+						<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+							<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+							<div style="position:absolute;display:block;background:url('images/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+						</div>
+						<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 450px; overflow: hidden;">
+							<div data-p="112.50" style="display: none;">
+								<table class="table table-bordered">
+									<br>
+									
+									<tr  class="txt-font">
+										<td>Dr. Satish S. Ubale</td>
+										<td>Chairman</td>
+									</tr>
+									<tr  class="txt-font">
+										<td>Dr.Joe Lopez</td>
+										<td>Member</td>
+									</tr>
+									<tr  class="txt-font">
+										<td>Ms. Vrunda Deshmukh</td>
+										<td>Member</td>
+									</tr>
+									<tr  class="txt-font">
+										<td>Mr. Sachin Bhame</td>
+										<td>Secretary</td>
+									</tr>
+								</table>
+							</div>
+							<div data-p="112.50" style="display: none;">
+								<table class="table table-bordered">
+									<tr class="txt-font">
+										<td>Dr. Satish S. Ubale</td>
+										<td>Chairman</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Ms.Vrunda Deshmukh</td>
+										<td>Member</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Dr. Joe Lopez</td>
+										<td>Member</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Mr.Dolatade Garande</td>
+										<td>Member</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Mrs. Rosalind Fernandes</td>
+										<td>Member</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Mr. Isaq Akram</td>
+										<td>Member</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				<script>
+					jssor_1_slider_init();
+				</script>
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel with-nav-tabs panel-danger panel-bgcolor">
+						<div class="panel-heading">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#Ladies" data-toggle="pill">Ladies Grievance Committee</a></li>
+								<li><a href="#Grievance" data-toggle="pill">Grievance Redressal Committee</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div id="Ladies" class="tab-pane fade in active">
+                                <table class="table table-bordered table-responsive">
+				
+									
+									<tr  class="txt-font">
+										<td>Dr. Satish S. Ubale</td>
+										<td>Chairman</td>
+									</tr>
+									<tr  class="txt-font">
+										<td>Dr.Joe Lopez</td>
+										<td>Member</td>
+									</tr>
+									<tr  class="txt-font">
+										<td>Ms. Vrunda Deshmukh</td>
+										<td>Member</td>
+									</tr>
+									<tr  class="txt-font">
+										<td>Mr. Sachin Bhame</td>
+										<td>Secretary</td>
+									</tr>
+								</table>
+                            </div>
+                            <div id="Grievance" class="tab-pane fade">
+                                <table class="table table-bordered table-responsive">
+									<tr class="txt-font">
+										<td>Dr. Satish S. Ubale</td>
+										<td>Chairman</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Ms.Vrunda Deshmukh</td>
+										<td>Member</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Dr. Joe Lopez</td>
+										<td>Member</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Mr.Dolatade Garande</td>
+										<td>Member</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Mrs. Rosalind Fernandes</td>
+										<td>Member</td>
+									</tr>
+									<tr class="txt-font">
+										<td>Mr. Isaq Akram</td>
+										<td>Member</td>
+									</tr>
+								</table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="panel with-nav-tabs panel-danger panel-bgcolor">
+						<div class="panel-heading">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#Procedure1" data-toggle="pill">Procedure for Redressel of Grievances:</a></li>
+								<li><a href="#Procedure2" data-toggle="pill">Procedure, Periodicity and Attendance at Meetings:</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div id="Procedure1" class="tab-pane fade in active">
+								<ul class="paraalign">
+									<li>
+										<p class="pstyle">The aggrieved member/ complainant shall submit a written & signed petition/ complaint to the Secretary of the Grievance Committee with copy to the Chairman within 7 days after the commitment of grievance.</p>
+									</li>
+									<li>
+										<p class="pstyle">The chairman through Secretary shall call the complainant for a meeting of Grievance committee within 10 working days.</p>
+									</li>
+									<li>
+										<p class="pstyle">The Committee shall study the petition and after looking into the relevant documents, discuss with those concerned and submit its recommendations and report to the Director as expeditiously as possible, but in any case within 45 working days after the receipt of petition.</p>
+									</li>
+									<li>
+										<p class="pstyle">In case of any difficulties, the Grievance Committee shall have discussion with the Director before a decision is taken.</p>
+									</li>
+									<li>
+										<p class="pstyle">The Director, as far as possible, shall be guided by the advice of the Grievance Committee unless the recommendations of the Committee violate basic rules and norms of the Institute.</p>
+									</li>
+								</ul>
+							</div>
+							<div id="Procedure2" class="tab-pane fade">
+								<ul class="paraalign">
+									<li>
+										<p class="pstyle">The Grievance Committee shall meet twice per AY i.e.1st week of Oct & 1st week of March generally. However, if necessary, it may meet frequently at the instance of the Convener or at the request of the other members to discuss the various issues received.</p>
+									</li>
+									<li>
+										<p class="pstyle">Committee shall organize at least two developmental activities per AY.</p>
+									</li>
+									<li>
+										<p class="pstyle">At least four members of the Grievance Committee shall be present in a meeting.</p>
+									</li>
+									<li>
+										<p class="pstyle">If a member of the Grievance Committee is connected with the grievance of the aggrieved individual, the concerned member of the Grievance Committee shall not participate in the deliberations regarding that individual's case.</p>
+									</li>
+									<li>
+										<p class="pstyle">If the aggrieved person happens to be a member of the Grievance Committee, then she shall not participate in the deliberations as a member of the Committee when her representation is being considered.</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<h3 class="bgcolor">Objectives of the Committee:</h3>
+					<ul class="paraalign2">
+						<li>
+							<p class="parastyle">To consider the complaints of grievances from female teaching staff, non teaching staff & girl students.</p>
+						</li>
+						<li>
+							<p class="parastyle">To investigate all the complaints / charges thoroughly & professionally within stipulated time.</p>
+						</li>
+						<li>
+							<p class="parastyle">To ensure confidentiality & time bound response to the complaints & build confidence about impartially.</p>
+						</li>
+						<li>
+							<p class="parastyle">To undertake motivational & developmental activities for female staff & girl students.</p>
+						</li>
+						<li>
+							<p class="parastyle">To sensitize girl students about the demand of Corporate life & work culture.</p>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<h3 class="bgcolor">Terms of Reference:</h3>
+					<p class="parastyle" style="line-height: 2.5em;">The Grievance Committee shall consider all grievances submitted in writing by an individual regarding employment, working conditions, eve teasing and any other alleged injustice done to female employee/girl students while discharging their duties/attending sessions at the Institute. The Grievance Committee shall have access to all files confidential or otherwise relevant to the individual's grievance.</p>
+				</div>
+			</div>
+		</div>
+        </div>
+        
+        
+		<!--Footer part-->
+        <footer class="site-footer">
+		<div class="containerfooter">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<h5 class="text-color">CONTACT US</h5>
+						<p class="text-color">The simple contact form below comes packed within this theme. 
+							<br><br>Mailing address:<br>877 Filbert Street<br>Chester, PA 19013
+						</p>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<h5 class="text-color">FAVOURITES</h5>
+						<ul class="text-color">
+							<li><a href="#" class="text-color">A ti Z Index</a></li>
+							<li><a href="#" class="text-color">Admissions</a></li>
+							<li><a href="#" class="text-color">Bookstore</a></li>
+							<li><a href="#" class="text-color">Catalog/Classes</a></li>
+							<li><a href="#" class="text-color">Dining</a></li>
+							<li><a href="#" class="text-color">Graduation</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<h5 class="text-color">Quick Links</h5>
+						<ul class="text-color">
+							<li><a href="anti-ragging.html" class="text-color">Anti-Ragging</a></li>
+							<li><a href="comitee.html" class="text-color" style="color:#DEBB69;">Grievance Comittee</a></li>
+							<li><a href="mentors.html" class="text-color">Corporate Mentors</a></li>
+							<li><a href="TeachingMethodology.html" class="text-color">Teaching Methodology</a></li>
+							<li><a href="activities.html" class="text-color">Gallery</a></li>
+							<!--<li><a href="#" class="text-color">Alumni</a></li>-->
+						</ul>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<h5 class="text-color">STUDY</h5>
+						<ul class="text-color">
+							<li class="a"><a href="#" class="text-color">Courses</a></li>
+							<li class="a"><a href="#" class="text-color">Apply Now</a></li>
+							<li class="a"><a href="#" class="text-color">Scholarships</a></li>
+							<li class="a"><a href="#" class="text-color">FAQs</a></li>
+							<li class="a"><a href="#" class="text-color">Postdocs</a></li>
+							<li class="a"><a href="#" class="text-color">Student enquiries</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<h5 class="text-color">Follow Us</h5>
+						<ul class="text-color">
+							<!--<div class="col-md-1 col-lg-1 col-sm-4 col-xs-4">-->
+							<li><a href="#" class="fa fa-facebook text-color"></a></li>
+							<li><a href="#" class="fa fa-twitter text-color"></a></li>
+							<li><a href="#" class="fa fa-linkedin text-color"></a></li>
+							<!--</div>
+								<div class="col-md-1 col-lg-1 col-sm-4 col-xs-4">
+								<li><a href="#" class="fa fa-instagram text-color"></a></li>
+								<li><a href="#" class="fa fa-apple text-color"></a></li>
+								<li><a href="#" class="fa fa-youtube text-color"></a></li>
+								<!--</div>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=" containerfooter2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+						<p class="small-footer-text">© Copyright 2014. Universe designed by </p>
+					</div>
+					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+						<ul class="nav navbar-nav">
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Home</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Courses</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Events</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Blogs</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Shortcodes</a></li>
+							<li class="bgcolor-li2"><a href="#" class="txtcolor-li">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        </footer>
+	</body>
+</html>
